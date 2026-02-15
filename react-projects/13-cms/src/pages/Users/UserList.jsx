@@ -3,21 +3,19 @@ import { userRow } from '../../Datas';
 import './UserList.css';
 import { DataGrid } from '@mui/x-data-grid';
 import { Link } from 'react-router';
-import { width } from '@mui/system';
 import { DeleteOutline } from '@mui/icons-material';
 
 export default function UserList() {
     const [userDatas, setUserDatas] = useState(userRow);
 
-    const [selectProduct,setSelectProduct] = useState(null)
+    const [selectProduct, setSelectProduct] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handlerEdit = product => {
-        setSelectProduct(product)
-        setIsModalOpen(true)
+    const handlerEdit = (product) => {
+        setSelectProduct(product);
+        setIsModalOpen(true);
         console.log('اطلاعات', product);
-        
-    }
+    };
 
     const userDelete = (userID) => {
         setUserDatas(userDatas.filter((user) => user.id != userID));

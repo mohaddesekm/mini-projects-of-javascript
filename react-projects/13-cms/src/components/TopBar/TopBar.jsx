@@ -1,14 +1,15 @@
-import React from 'react';
 import './TopBar.css';
 import { NotificationsNone, Language, Settings } from '@mui/icons-material';
 
-export default function TopBar() {
+export default function TopBar({ onMenuClick }) {
     return (
         <>
             <div className="topbar">
                 <div className="topLeft">
                     <span className="logo">CMS Project</span>
-                    <span className="x-menu">=</span>
+                    <span className="x-menu" onClick={onMenuClick}>
+                        =
+                    </span>
                 </div>
 
                 <div className="topRight">

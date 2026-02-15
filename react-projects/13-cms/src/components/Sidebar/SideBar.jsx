@@ -7,19 +7,26 @@ import {
     AttachMoney,
     BarChart,
     MailOutline,
-    DynamicFeed,
     ChatBubbleOutline,
-    WorkOutline,
     Report,
 } from '@mui/icons-material';
 import PersonIcon from '@mui/icons-material/Person';
 import MessageIcon from '@mui/icons-material/Message';
 import { Link } from 'react-router';
 
-export default function SideBar() {
+export default function SideBar({ isOpen, onClose }) {
     return (
         <>
-            <div className="sideBar">
+            {isOpen && (
+                <div
+                    className="sidebar-overlay"
+                    onClick={() => {
+                        console.log('overrrrrr');
+                        onClose();
+                    }}
+                ></div>
+            )}
+            <div className={`sideBar ${isOpen ? 'active' : ''}`}>
                 <div className="sideBarMenu">
                     <h3 className="sideBarTitle">DashBoard</h3>
                     <ul className="sideBarList">

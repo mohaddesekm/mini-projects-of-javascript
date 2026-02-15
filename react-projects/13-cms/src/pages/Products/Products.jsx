@@ -3,7 +3,6 @@ import { products } from '../../Datas';
 import './Products.css';
 import { DataGrid } from '@mui/x-data-grid';
 import { Link } from 'react-router';
-import { width } from '@mui/system';
 import { DeleteOutline } from '@mui/icons-material';
 export default function UserList() {
     const [productsData, setProductsData] = useState(products);
