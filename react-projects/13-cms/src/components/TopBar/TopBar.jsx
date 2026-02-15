@@ -25,7 +25,7 @@ export default function TopBar({ onMenuClick }) {
                         <Settings />
                     </div>
                     <div className="topAvatar">
-                        <img src="../public/images/11.png" alt="react" />
+                        <img src="/images/11.png" alt="react" />
                     </div>
                 </div>
             </div>

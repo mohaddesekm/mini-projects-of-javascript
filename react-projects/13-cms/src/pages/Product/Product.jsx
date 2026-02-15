@@ -28,7 +28,7 @@ export default function Product() {
                     <div className="productInfoTop">
                         <img
                             className="productInfoImg"
-                            src="/public/images/hp.jpg"
+                            src="/images/hp.jpg"
                             alt="laptop"
                         />
                         <span className="productName">
@@ -84,7 +84,7 @@ export default function Product() {
                         <div className="productUploader">
                             <img
                                 className="productUploaderImg"
-                                src="/public/images/hp.jpg"
+                                src="/images/hp.jpg"
                                 alt="profile photo"
                             />
                             <label>
