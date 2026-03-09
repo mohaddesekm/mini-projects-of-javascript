@@ -12,7 +12,7 @@ import {
 } from '@mui/icons-material';
 import PersonIcon from '@mui/icons-material/Person';
 import MessageIcon from '@mui/icons-material/Message';
-import { Link } from 'react-router';
+import { NavLink } from 'react-router';
 
 export default function SideBar({ isOpen, onClose }) {
     return (
@@ -30,12 +30,10 @@ export default function SideBar({ isOpen, onClose }) {
                 <div className="sideBarMenu">
                     <h3 className="sideBarTitle">DashBoard</h3>
                     <ul className="sideBarList">
-                        <Link to="/">
-                            <li className="sideBarListItem active">
-                                <LineStyle className="sideBarIcon" />
-                                <div className="item-before">Home</div>
-                            </li>
-                        </Link>
+                        <NavLink to="/">
+                            <LineStyle className="sideBarIcon" />
+                            <div className="item-before">Home</div>
+                        </NavLink>
 
                         <li className="sideBarListItem">
                             <Timeline className="sideBarIcon" />
@@ -52,26 +50,22 @@ export default function SideBar({ isOpen, onClose }) {
                 <div className="sideBarMenu">
                     <h3 className="sideBarTitle">Quick Menu</h3>
                     <ul className="sideBarList">
-                        <Link to="/users">
-                            <li className="sideBarListItem">
-                                <PersonIcon className="sideBarIcon" />
-                                <div className="item-before">Users</div>
-                            </li>
-                        </Link>
+                        <NavLink to="/users">
+                            {/* <li className="sideBarListItem"> */}
+                            <PersonIcon className="sideBarIcon" />
+                            <div className="item-before">Users</div>
+                            {/* </li> */}
+                        </NavLink>
 
-                        <Link to="/newUser">
-                            <li className="sideBarListItem">
-                                <Storefront className="sideBarIcon" />
-                                <div>New Users</div>
-                            </li>
-                        </Link>
+                        <NavLink to="/newUser">
+                            <Storefront className="sideBarIcon" />
+                            <div>New Users</div>
+                        </NavLink>
 
-                        <Link to="/products">
-                            <li className="sideBarListItem">
-                                <AttachMoney className="sideBarIcon" />
-                                <div className="item-before">Products</div>
-                            </li>
-                        </Link>
+                        <NavLink to="/products">
+                            <AttachMoney className="sideBarIcon" />
+                            <div className="item-before">Products</div>
+                        </NavLink>
 
                         <li className="sideBarListItem">
                             <BarChart className="sideBarIcon" />
